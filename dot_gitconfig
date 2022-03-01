@@ -1,0 +1,31 @@
+[user]
+	name = Simon Caignart
+	email = simon.caignart@gmail.com
+	signingkey = 888B7E661BEC2885
+[core]
+  editor = code --wait
+[diff]
+  tool = vscode
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
+[color]
+	ui = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[pull]
+	rebase = false
+
+
+[help]
+	autocorrect = prompt
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = main
