@@ -84,8 +84,6 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 {{ end -}}
 
-# Linux only configuration
-
 {{ if eq .chezmoi.os "linux" -}}
 # vscode path export
 export PATH=$PATH:"/mnt/c/Users/{{ .chezmoi.group }}/AppData/Local/Programs/Microsoft VS Code/bin"
