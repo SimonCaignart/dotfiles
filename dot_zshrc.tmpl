@@ -76,6 +76,9 @@ eval "$(starship init zsh)"
 
 # nvm dir config
 {{ if eq .chezmoi.os "darwin" -}}
+
+alias python=/Library/Frameworks/Python.framework/Versions/3.9/bin/python3
+
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
