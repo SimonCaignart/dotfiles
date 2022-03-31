@@ -90,6 +90,11 @@ export NVM_DIR="$HOME/.nvm"
 {{ end -}}
 
 {{ if eq .chezmoi.os "linux" -}}
+
+# aliases for python
+alias python=python3
+alias pip=pip3
+
 # vscode path export
 export PATH=$PATH:"/mnt/c/Users/{{ .chezmoi.group }}/AppData/Local/Programs/Microsoft VS Code/bin"
 
