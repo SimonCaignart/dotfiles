@@ -74,21 +74,21 @@ export EDITOR="micro"
 # enable starship
 eval "$(starship init zsh)"
 
-# nvm dir config
+# macOS config
 {{ if eq .chezmoi.os "darwin" -}}
 
+# aliases for python
 alias python=/Library/Frameworks/Python.framework/Versions/3.9/bin/python3
 alias pip=/Library/Frameworks/Python.framework/Versions/3.9/bin/pip3
 
+# nvm config
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-{{ else if eq .chezmoi.os "linux" -}}
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 {{ end -}}
 
+# Linux config
 {{ if eq .chezmoi.os "linux" -}}
 
 # aliases for python
