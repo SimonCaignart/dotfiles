@@ -10,7 +10,7 @@ format = " took [$duration]($style)"
 
 [battery]
 full_symbol = "🔋"
-charging_symbol = "🔌"
+charging_symbol = "🔌 "
 discharging_symbol = "⚡"
 
 [[battery.display]]
